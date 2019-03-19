@@ -1,0 +1,29 @@
+<div class="row">
+    <h1 class="text-primary">List of contacts</h1>
+    <table class="table table-hover">
+        <thead>
+        <tr class="table-primary">
+            <th class="text-center" scope="col">#</th>
+            <th class="text-center" scope="col">Name</th>
+            <th class="text-center" scope="col">Telephone</th>
+            <th class="text-center" scope="col">Address</th>
+            <th class="text-center" scope="col">Options</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contact of contacts; let index = index;">
+            <td class="text-center align-middle"><strong>{{index + 1}}</strong></td>
+            <td class="text-center align-middle">
+                <strong>{{contact.firstName}} {{contact.lastName}}</strong>
+            </td>
+            <td class="text-center align-middle text-info"><strong>{{contact.telephone}}</strong></td>
+            <td class="text-center align-middle text-info"><strong>{{contact.address.street}} {{contact.address.zip}} {{contact.address.city}}</strong></td>
+            <td class="text-center align-middle"> 
+                <button class="btn btn-info" routerLink="/contact/detail/{{contact.id}}">Details</button>
+                <button class="btn btn-warning" routerLink="/contact/update/{{contact.id}}">Update</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

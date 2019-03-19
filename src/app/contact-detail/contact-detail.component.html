@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{contact.firstName}} {{contact.lastName}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      Tel: <span class="text-info">{{contact.telephone}}</span>
+    </h6>
+    <p class="card-text">
+      Address: <br/>
+      <span class="text-info">
+        {{contact.address.street}}<br/>
+        {{contact.address.zip}} {{contact.address.city}}
+      </span>
+    </p>
+    <a href="" routerLink="/contacts" class="card-link">Back to contacts list</a>
+  </div>
+</div>
